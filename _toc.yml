@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: titlepage
+options:
+    numbered: True
+chapters:
+- file: data_standardization
+- file: sample_output
+
+
+
+
+   
+    
+   
+ 
