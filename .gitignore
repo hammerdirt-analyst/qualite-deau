@@ -12,8 +12,7 @@
 
 # generated data
 /ignorethis/
-ignorethis/
-*/ignorethis/
+
 # IPython
 profile_default/
 ipython_config.py

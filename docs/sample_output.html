@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Sample output &#8212; Bioindicators</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sample_output';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="1. Data processing" href="data_standardization.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Bioindicators</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="data_standardization.html">1. Data processing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Sample output</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/qualite-deau" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/qualite-deau/issues/new?title=Issue%20on%20page%20%2Fsample_output.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sample output</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-the-plate-counts-for-bioindicators-durring-the-festival-different-than-the-counts-before-and-after-the-festival">2.1. 1. Are the plate counts for bioindicators durring the festival different than the counts before and after the festival?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#h-sub-0-sub-e-count-sub-jazz-dates-sub-e-count-sub-other-dates-sub">2.1.1. H<sub>0</sub>: E[count]<sub>jazz dates</sub> = E[count]<sub>other dates</sub></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#h-sub-1-sub-e-count-sub-jazz-dates-sub-neq-e-count-sub-other-dates-sub">2.1.2. H<sub>1</sub>: E[count]<sub>jazz dates</sub> <span class="math notranslate nohighlight">\(\neq\)</span> E[count]<sub>other dates</sub></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="sample-output">
+<h1><span class="section-number">2. </span>Sample output<a class="headerlink" href="#sample-output" title="Permalink to this heading">#</a></h1>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      
+
+    Montreux Jazz festival: Do it together water quality monitoring
+          
+
+    number of sample days 16
+          
+
+    number of samples 53
+          
+      
+    Total number of cards:
+    
+
+    [(&#39;bioindicator&#39;, 826), (&#39;coliform&#39;, 826), (&#39;turquoise&#39;, 826)]
+      
+      
+      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/370d527b856821903ac4acef00bc164a3291a012047edd447d25f97e5ed8d716.png" src="_images/370d527b856821903ac4acef00bc164a3291a012047edd447d25f97e5ed8d716.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/372e4ca090ae7fca8487623e080629ce8977f0a3f6162f3bfcc56ba82e1a6b28.png" src="_images/372e4ca090ae7fca8487623e080629ce8977f0a3f6162f3bfcc56ba82e1a6b28.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/40fcc02c164d58764cef2c6af97929e2fa3e0b6aca3d03a310307cc743cbef3c.png" src="_images/40fcc02c164d58764cef2c6af97929e2fa3e0b6aca3d03a310307cc743cbef3c.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  
+The weighted average and standard deviation of BIOINDICATORS at each location.
+
+  SVT : {&#39;weighted_av&#39;: 39.19, &#39;std&#39;: 57.11, &#39;a_min&#39;: 0.0, &#39;a_max&#39;: 200.0, &#39;n_samples&#39;: 74}
+  VNX : {&#39;weighted_av&#39;: 19.4, &#39;std&#39;: 21.32, &#39;a_min&#39;: 0.0, &#39;a_max&#39;: 66.67, &#39;n_samples&#39;: 67}
+  MRD : {&#39;weighted_av&#39;: 34.29, &#39;std&#39;: 43.27, &#39;a_min&#39;: 0.0, &#39;a_max&#39;: 133.33, &#39;n_samples&#39;: 70}
+    
+  
+The weighted average and standard deviation of COLIFORMS at each location.
+
+  SVT : {&#39;weighted_av&#39;: 4162.16, &#39;std&#39;: 3691.18, &#39;a_min&#39;: 520.0, &#39;a_max&#39;: 15733.33, &#39;n_samples&#39;: 74}
+  VNX : {&#39;weighted_av&#39;: 2970.15, &#39;std&#39;: 1170.61, &#39;a_min&#39;: 866.67, &#39;a_max&#39;: 4533.33, &#39;n_samples&#39;: 67}
+  MRD : {&#39;weighted_av&#39;: 3614.29, &#39;std&#39;: 2055.43, &#39;a_min&#39;: 1050.0, &#39;a_max&#39;: 7033.33, &#39;n_samples&#39;: 70}
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bioindicator results</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Bioindicator averages +/- standard deviation, by site&quot;</span>
+<span class="n">soi</span> <span class="o">=</span> <span class="s2">&quot;bioindicator&quot;</span>
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># the shaded area of the jazz</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">f_start</span><span class="p">,</span> <span class="n">f_end</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Dates of interest&quot;</span><span class="p">)</span>
+
+<span class="c1"># the results from each location</span>
+<span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">sites</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">sample_groups</span><span class="p">[</span><span class="n">site</span><span class="p">]</span><span class="o">.</span><span class="n">format_df_for_display_mean_std</span><span class="p">(</span><span class="n">soi</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">scatter_plot_with_std</span><span class="p">(</span><span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">site</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">y_one</span><span class="o">=</span><span class="s2">&quot;std -&quot;</span><span class="p">,</span> <span class="n">y_two</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">y_three</span><span class="o">=</span><span class="s2">&quot;std +&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">marker_colors</span><span class="p">[</span><span class="n">site</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="n">site_markers</span><span class="p">[</span><span class="n">site</span><span class="p">]))</span>
+
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">major_and_minor_ticks</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Average colonies per 100 ml&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="n">handles</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">handles</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">handles</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">handles</span><span class="p">[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="n">ls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Dates of interest&quot;</span><span class="p">,</span> <span class="s2">&quot;SVT&quot;</span><span class="p">,</span> <span class="s2">&quot;VNX&quot;</span><span class="p">,</span> <span class="s2">&quot;MRD&quot;</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Montreux Clean Beach Project 2022: do-it-together sampling</span><span class="se">\n</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/e709b3f303373f42d3e9fa55c51fb2f8c5e338230c5578229274475fc484421c.png" src="_images/e709b3f303373f42d3e9fa55c51fb2f8c5e338230c5578229274475fc484421c.png" />
+</div>
+</div>
+<div class="section" id="are-the-plate-counts-for-bioindicators-durring-the-festival-different-than-the-counts-before-and-after-the-festival">
+<h2><span class="section-number">2.1. </span>1. Are the plate counts for bioindicators durring the festival different than the counts before and after the festival?<a class="headerlink" href="#are-the-plate-counts-for-bioindicators-durring-the-festival-different-than-the-counts-before-and-after-the-festival" title="Permalink to this heading">#</a></h2>
+<div class="section" id="h-sub-0-sub-e-count-sub-jazz-dates-sub-e-count-sub-other-dates-sub">
+<h3><span class="section-number">2.1.1. </span>H<sub>0</sub>: E[count]<sub>jazz dates</sub> = E[count]<sub>other dates</sub><a class="headerlink" href="#h-sub-0-sub-e-count-sub-jazz-dates-sub-e-count-sub-other-dates-sub" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="h-sub-1-sub-e-count-sub-jazz-dates-sub-neq-e-count-sub-other-dates-sub">
+<h3><span class="section-number">2.1.2. </span>H<sub>1</sub>: E[count]<sub>jazz dates</sub> <span class="math notranslate nohighlight">\(\neq\)</span> E[count]<sub>other dates</sub><a class="headerlink" href="#h-sub-1-sub-e-count-sub-jazz-dates-sub-neq-e-count-sub-other-dates-sub" title="Permalink to this heading">#</a></h3>
+<p>If the expected value of the plate counts during the festival are within the 95% confidence interval of the plate counts before and after the festival then we assume that there was no difference between the three time periods.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    
+The weighted average, standard deviaton, min, max and number of samples by period:
+
+    Before the jazz:
+    {&#39;weighted_av&#39;: 75.0, &#39;std&#39;: 84.29, &#39;a_min&#39;: 16.67, &#39;a_max&#39;: 200.0, &#39;n_samples&#39;: 16}
+    
+
+    During the jazz:
+    {&#39;weighted_av&#39;: 25.0, &#39;std&#39;: 35.94, &#39;a_min&#39;: 0.0, &#39;a_max&#39;: 116.67, &#39;n_samples&#39;: 96}
+    
+
+    After the jazz:
+    {&#39;weighted_av&#39;: 30.3, &#39;std&#39;: 38.33, &#39;a_min&#39;: 0.0, &#39;a_max&#39;: 133.33, &#39;n_samples&#39;: 99}
+    
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/b34fdbba7fd69f3aab42a6c96e81ec86acec7fa17422413a6cd9fc9cb3c12822.png" src="_images/b34fdbba7fd69f3aab42a6c96e81ec86acec7fa17422413a6cd9fc9cb3c12822.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/36ddc4efa033a47c3b91691bcdbb49751e2a1d2b5c793a3310a149f26a6e43b0.png" src="_images/36ddc4efa033a47c3b91691bcdbb49751e2a1d2b5c793a3310a149f26a6e43b0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_standardization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Data processing</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-the-plate-counts-for-bioindicators-durring-the-festival-different-than-the-counts-before-and-after-the-festival">2.1. 1. Are the plate counts for bioindicators durring the festival different than the counts before and after the festival?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#h-sub-0-sub-e-count-sub-jazz-dates-sub-e-count-sub-other-dates-sub">2.1.1. H<sub>0</sub>: E[count]<sub>jazz dates</sub> = E[count]<sub>other dates</sub></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#h-sub-1-sub-e-count-sub-jazz-dates-sub-neq-e-count-sub-other-dates-sub">2.1.2. H<sub>1</sub>: E[count]<sub>jazz dates</sub> <span class="math notranslate nohighlight">\(\neq\)</span> E[count]<sub>other dates</sub></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+   hammerdirt-hackuarium 2023
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
