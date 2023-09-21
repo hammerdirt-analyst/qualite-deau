@@ -294,6 +294,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-data">1.3. Sample data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#survey-data">1.4. Survey data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-labels">1.4.1. Applying labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labeling-the-date-range-of-interest">1.4.2. Labeling the date range of interest</a></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +327,7 @@ document.write(`
 <li><p>Other</p></li>
 </ul>
 </li>
-<li><p>coef: the volume of water used for the sample</p></li>
+<li><p>coef:  the correction factor applied, to allow reporting of colony counts per 100ml of the original water sample.</p></li>
 </ul>
 <p>The purpose of the sampling is to identify colonies that appear in the media and classify them as one of the possible labels. The label of interest is <em>Bioindicators</em>, this represents the bacteria that are issue from the organism of interest. The organism in this case is people, the <em>Bioindicator</em> is issue from fecal contaminants.</p>
 </div>
@@ -388,6 +389,9 @@ document.write(`
       <th>location</th>
       <th>doy</th>
       <th>week</th>
+      <th>isjazz</th>
+      <th>label</th>
+      <th>medium</th>
     </tr>
   </thead>
   <tbody>
@@ -406,6 +410,9 @@ document.write(`
       <td>VNX</td>
       <td>163</td>
       <td>24</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC-A</td>
     </tr>
     <tr>
       <th>1</th>
@@ -422,6 +429,9 @@ document.write(`
       <td>VNX</td>
       <td>163</td>
       <td>24</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC-A</td>
     </tr>
     <tr>
       <th>2</th>
@@ -438,6 +448,9 @@ document.write(`
       <td>VNX</td>
       <td>163</td>
       <td>24</td>
+      <td>False</td>
+      <td>Coliform</td>
+      <td>ECC-A</td>
     </tr>
     <tr>
       <th>3</th>
@@ -454,6 +467,9 @@ document.write(`
       <td>VNX</td>
       <td>163</td>
       <td>24</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC-A</td>
     </tr>
     <tr>
       <th>4</th>
@@ -470,6 +486,9 @@ document.write(`
       <td>VNX</td>
       <td>163</td>
       <td>24</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC-A</td>
     </tr>
   </tbody>
 </table>
@@ -526,6 +545,173 @@ document.write(`
 
 </pre></div>
 </div>
+</div>
+<div class="section" id="labeling-the-date-range-of-interest">
+<h3><span class="section-number">1.4.2. </span>Labeling the date range of interest<a class="headerlink" href="#labeling-the-date-range-of-interest" title="Permalink to this heading">#</a></h3>
+<p>Voici les dates de Jazz pour toutes les années de prélèvement :</p>
+<ul class="simple">
+<li><p>2016:  2016-07-01 - 2016-07-16</p></li>
+<li><p>2017: 2017-06-30 - 2017-06-15</p></li>
+<li><p>2020: 2020-07-03 - 2020-07-18</p></li>
+<li><p>2022: 2022-07-01 - 2022-07-16</p></li>
+<li><p>2023: 2023-06-30 - 2023-07-15</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mask the date ranges</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+
+<span class="k">def</span> <span class="nf">make_date_object</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># y1 = (df[&#39;date&#39;] &gt;= make_date_object(&quot;2020-07-03&quot; )) &amp; (df[&#39;date&#39;] &lt;= make_date_object(&quot;2020-07-18&quot;))</span>
+<span class="c1"># y2 = (df[&#39;date&#39;] &gt;= make_date_object(&quot;2022-07-01&quot; )) &amp; (df[&#39;date&#39;] &lt;= make_date_object(&quot;2022-07-16&quot;))</span>
+<span class="c1"># y3 = (df[&#39;date&#39;] &gt;= make_date_object(&quot;2023-06-30&quot; )) &amp; (df[&#39;date&#39;] &lt;= make_date_object(&quot;2023-07-15&quot;))</span>
+
+<span class="c1"># df.loc[y1, &quot;isjazz&quot;] = True</span>
+<span class="c1"># df.loc[y2, &quot;isjazz&quot;] = True</span>
+<span class="c1"># df.loc[y3, &quot;isjazz&quot;] = True</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>sample</th>
+      <th>temperature</th>
+      <th>media</th>
+      <th>color</th>
+      <th>count</th>
+      <th>image (48h)</th>
+      <th>coef</th>
+      <th>date_sample</th>
+      <th>year</th>
+      <th>location</th>
+      <th>doy</th>
+      <th>week</th>
+      <th>isjazz</th>
+      <th>label</th>
+      <th>medium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-06-12</td>
+      <td>VNX1</td>
+      <td>16.1</td>
+      <td>ECC-A</td>
+      <td>Dark Blue</td>
+      <td>0</td>
+      <td>20230614_205159.jpg</td>
+      <td>100.0</td>
+      <td>('12/6/2023', 'VNX1')</td>
+      <td>2023</td>
+      <td>VNX</td>
+      <td>163</td>
+      <td>24</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC-A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-06-12</td>
+      <td>VNX1</td>
+      <td>16.1</td>
+      <td>ECC-A</td>
+      <td>Turquoise</td>
+      <td>0</td>
+      <td>20230614_205159.jpg</td>
+      <td>100.0</td>
+      <td>('12/6/2023', 'VNX1')</td>
+      <td>2023</td>
+      <td>VNX</td>
+      <td>163</td>
+      <td>24</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC-A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-06-12</td>
+      <td>VNX1</td>
+      <td>16.1</td>
+      <td>ECC-A</td>
+      <td>Pink</td>
+      <td>11</td>
+      <td>20230614_205159.jpg</td>
+      <td>100.0</td>
+      <td>('12/6/2023', 'VNX1')</td>
+      <td>2023</td>
+      <td>VNX</td>
+      <td>163</td>
+      <td>24</td>
+      <td>False</td>
+      <td>Coliform</td>
+      <td>ECC-A</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-06-12</td>
+      <td>VNX2</td>
+      <td>16.1</td>
+      <td>ECC-A</td>
+      <td>Dark Blue</td>
+      <td>1</td>
+      <td>20230614_205229.jpg</td>
+      <td>100.0</td>
+      <td>('12/6/2023', 'VNX2')</td>
+      <td>2023</td>
+      <td>VNX</td>
+      <td>163</td>
+      <td>24</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC-A</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-06-12</td>
+      <td>VNX2</td>
+      <td>16.1</td>
+      <td>ECC-A</td>
+      <td>Turquoise</td>
+      <td>1</td>
+      <td>20230614_205229.jpg</td>
+      <td>100.0</td>
+      <td>('12/6/2023', 'VNX2')</td>
+      <td>2023</td>
+      <td>VNX</td>
+      <td>163</td>
+      <td>24</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC-A</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell docutils container">
@@ -535,8 +721,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;ECC-A&#39;, &#39;Double side ECC&#39;, &#39;Double side E coli&#39;, &#39;ECC&#39;, &#39;LB&#39;,
-       &#39;levine&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;ECC-A&#39;, &#39;ECC&#39;, &#39;E coli&#39;, &#39;LB&#39;, &#39;Levine&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -548,8 +733,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Bioindicator&#39;, &#39;Other&#39;, &#39;Coliform&#39;, &#39;purple&#39;, &#39;mauve&#39;],
-      dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Bioindicator&#39;, &#39;Other&#39;, &#39;Coliform&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -585,12 +769,231 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;IntegerArray&gt;
-[24, 25, 26, 27, 28, 29, 30, 31]
-Length: 8, dtype: UInt32
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([24, 25, 26, 27, 28, 29, 30, 31])
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">sites</span><span class="p">)]</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;nd&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>sample</th>
+      <th>temperature</th>
+      <th>media</th>
+      <th>color</th>
+      <th>count</th>
+      <th>image (48h)</th>
+      <th>coef</th>
+      <th>date_sample</th>
+      <th>year</th>
+      <th>location</th>
+      <th>doy</th>
+      <th>week</th>
+      <th>isjazz</th>
+      <th>label</th>
+      <th>medium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1105</th>
+      <td>2022-07-18</td>
+      <td>VNX2</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Dark Blue</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX2')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1106</th>
+      <td>2022-07-18</td>
+      <td>VNX2</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Turquoise</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX2')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1107</th>
+      <td>2022-07-18</td>
+      <td>VNX2</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Pink</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX2')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Coliform</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1108</th>
+      <td>2022-07-18</td>
+      <td>VNX3</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Dark Blue</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX3')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1109</th>
+      <td>2022-07-18</td>
+      <td>VNX3</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Turquoise</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX3')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1110</th>
+      <td>2022-07-18</td>
+      <td>VNX3</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Pink</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX3')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Coliform</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1117</th>
+      <td>2022-07-18</td>
+      <td>VNX6</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Dark Blue</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX6')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Bioindicator</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1118</th>
+      <td>2022-07-18</td>
+      <td>VNX6</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Turquoise</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX6')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Other</td>
+      <td>ECC</td>
+    </tr>
+    <tr>
+      <th>1119</th>
+      <td>2022-07-18</td>
+      <td>VNX6</td>
+      <td>NaN</td>
+      <td>ECC</td>
+      <td>Pink</td>
+      <td>nd</td>
+      <td>nd</td>
+      <td>100.0</td>
+      <td>('18/7/2022', 'VNX6')</td>
+      <td>2022</td>
+      <td>VNX</td>
+      <td>199</td>
+      <td>29</td>
+      <td>False</td>
+      <td>Coliform</td>
+      <td>ECC</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 </div>
@@ -668,6 +1071,7 @@ Length: 8, dtype: UInt32
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-data">1.3. Sample data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#survey-data">1.4. Survey data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-labels">1.4.1. Applying labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labeling-the-date-range-of-interest">1.4.2. Labeling the date range of interest</a></li>
 </ul>
 </li>
 </ul>
