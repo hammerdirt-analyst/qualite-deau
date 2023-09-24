@@ -6,9 +6,11 @@ root: titlepage
 options:
     numbered: True
 chapters:
-- file: data_standardization
-- file: sample_output
-- file: new_sample
+- file: random_variables
+- file: samples_2023
+- file: samples_2022
+- file: samples_2020
+
 
 
 
