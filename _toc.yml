@@ -8,6 +8,7 @@ options:
 chapters:
 - file: data_standardization
 - file: sample_output
+- file: new_sample
 
 
 
