@@ -6,11 +6,11 @@ changed on october 31 2023
 
 _authors: Rachel, Roger_
 
-The Hackuarium has been monitoring the bathing water quality from June to August in the Baye de Montreux since 2016. This is a record of the results.
+The public service community laboratory association, Hackuarium, has been monitoring recreational water quality on Lake Geneva with eight-week summer sampling campaigns in Montreux since 2016. This pulls together analyses and summarises results of this volunteer work.
 
 ## Introduction
 
-* Needs to be completed
+Lifeguards from Montreux, who had participated in an open summer school around nanotech devices to detect pollution, joined in for one of the regular Hackuarium evenings, #OpenHackuarium, in February 2016 for brainstorming about ways to locally monitor lake water pollution.  Microbiological assays were suggested, as used already for several citizen science efforts by groups like WaterWatch. 
 
 
 ## Pariticpating orgainzations
