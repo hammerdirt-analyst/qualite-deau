@@ -52,12 +52,13 @@ Hackuarium, Hammerdirt, Biodesign.cc, The Montreux Jazz
 
 ### In addition to the installation of the pipes for the 'distant heating' system, were there upgrades to the local sewage network, and if so, did they have any effect on levels of pollution observed in 2023?
 
-* Can we obtain any further description of potential upgrades?
+* Can we obtain any further description of potential upgrades to the sewage pipe?
 * Defined by the average number of bioindicators per sampling day before and after the upgrades?
 * Defined by the probability that a collected sample will exceed the standard before and after the upgrades?
 
 ## Conclusions
 
 * state the conclusions
+  
 * more information
 * contact information
