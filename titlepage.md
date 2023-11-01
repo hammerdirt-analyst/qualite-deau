@@ -1,8 +1,8 @@
-# Quantifying changes in bioindicators
+# Quantifying changes in bioindicator levels
 
 ## This is a draft
 
-changed on october 31 2023
+changed on 1 November 2023
 
 _authors: Rachel, Roger
 
@@ -15,7 +15,7 @@ _![Lakeside23](https://github.com/rachelaronoff/qualite-deauRA/assets/48484650/9
 
 Lifeguards from Montreux, who had participated in an open summer school around nanotech devices to detect pollution, joined in for one of the regular Hackuarium evenings, #OpenHackuarium, in February 2016 for brainstorming about ways to locally monitor lake water pollution.  Microbiological assays were suggested, as used already for several citizen science efforts by groups like WaterWatch. 
 
-Experience using chromogenic EasyGel media in an educational context led to the proposition to use such methods for an initial 8-week sampling campaign,funded with a Hackuarium minigrant for the new project, Micro_to_Macro_Water_Pollution - part of the Montreux Clean Beach Project in collaboration with Biodesign.cc, and Hammerdirt.  
+Experience using chromogenic EasyGel media in an educational context led to the proposition to use such methods for an initial 8-week sampling campaign, funded with a Hackuarium minigrant for the new project, Micro_to_Macro_Water_Pollution - part of the Montreux Clean Beach Project in collaboration with Biodesign.cc, and Hammerdirt.  
 
 After two years documenting the observed 'Jazz effect' - when bioindicator levels for raw sewage entering the lake surpassed Swiss limits for recreational waters by several fold, we had little official response.  However, a further sampling season during the pandemic resulted in a significant difference. Additionally, data from official swimming beach monitoring corroborated these results, ultimately leading to an open access publication (https://doi.org/10.1002/2688-8319.12094) in 2021 about this volunteer participatory research. 
 
