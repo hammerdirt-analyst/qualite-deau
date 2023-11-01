@@ -35,26 +35,28 @@ Hackuarium, Hammerdirt, Biodesign.cc, The Montreux Jazz
 
 2) Is rain required for pollution peaks to be observed?
 
-3) What are the year by year total pollution levels for each year sampled?  
+3) What are the year by year total pollution levels for each sampling season (2016/2017/2020/2022/2023)?  
 
-3) Might leaks still be evident in the cement sewer system lines under the Montreux boardwalk, as the only serious peak of bioindicator incidence occurred in one site the week after the music festival in 2023?
+3) Might leaks still occur from the cement sewer system lines under the Montreux boardwalk, as the only serious peak of bioindicator incidence occurred in a particular site - the Vernex 'baby beach' - the week after the music festival in 2023?
 
-- as a further point: Will lake water pollution in areas outside official swimming beaches be officially monitored?
+- as a further point: Will lake water pollution in some areas outside official swimming beaches be officially monitored?
 
 
 ### Does the lake, in the area of concern, exceed bathing water quality standards during the event?
 
 * Definition of bathing water quality standards
   - Swiss standard is less than 100 bioindicator bacteria per 100ml for recreational waters, but only swimming beaches are monitored.
-* Extra questions, as coliform bacteria levels are also assessed officially at swimming beaches.
-
+* Extra questions, as coliform bacteria levels are also assessed officially at swimming beaches, and we learned in 2022 that seagulls and swans can also carry bioindicator bacteria.
 
 
 ### In addition to the installation of the pipes for the 'distant heating' system, were there upgrades to the local sewage network, and if so, did they have any effect on levels of pollution observed in 2023?
 
 * Can we obtain any further description of potential upgrades to the sewage pipe?
-* Defined by the average number of bioindicators per sampling day before and after the upgrades?
-* Defined by the probability that a collected sample will exceed the standard before and after the upgrades?
+  
+  Levels of pollution could include many other things, but in this case the focus is upon raw sewage, so it is basically
+  * Defined by the average number of bioindicators per sampling day before and after the upgrades  or 
+  * Defined by the probability that a collected sample will exceed the standard before and after the upgrades
+    
 
 ## Conclusions
 
