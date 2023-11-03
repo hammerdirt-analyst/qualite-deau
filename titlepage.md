@@ -10,7 +10,8 @@ _authors: Rachel, Roger
 
 The public service community laboratory association, Hackuarium, has been monitoring recreational water quality on Lake Geneva with eight-week summer sampling campaigns in Montreux since 2016. This pulls together analyses, summarises results from this volunteer work, and potentially will provide an app for future data collection, analyses, and communication.
 
-_![Lakeside23](https://github.com/rachelaronoff/qualite-deauRA/assets/48484650/9a37a1a8-3a39-49b9-9153-45341c408ea5)
+![cropbeachsign](https://github.com/rachelaronoff/qualite-deauRA/assets/48484650/466bb9c4-0dc5-4d29-bfba-6ba50b57a844)
+
 ## Introduction
 
 Lifeguards from Montreux, who had participated in an open summer school around nanotech devices to detect pollution, joined in for one of the regular Hackuarium evenings, #OpenHackuarium, in February 2016 for brainstorming about ways to locally monitor lake water pollution.  Microbiological assays were suggested, as used already for several citizen science efforts by groups like WaterWatch. 
