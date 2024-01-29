@@ -2,15 +2,15 @@
 
 ## This is a draft
 
-changed on 1 November 2023
 
-_authors: Rachel, Roger
+
+_authors: Rachel, Roger_
 
 
 
 The public service community laboratory association, Hackuarium, has been monitoring recreational water quality on Lake Geneva with eight-week summer sampling campaigns in Montreux since 2016. This pulls together analyses, summarises results from this volunteer work, and potentially will provide an app for future data collection, analyses, and communication.
 
-![cropbeachsign](https://github.com/rachelaronoff/qualite-deauRA/assets/48484650/466bb9c4-0dc5-4d29-bfba-6ba50b57a844)
+![cropbeachsign](resources/github_image_intro_smaller.png)
 
 ## Introduction
 
@@ -27,7 +27,7 @@ In 2022 and 2023, the Montreux Jazz subsidized further sampling seasons, while c
 
 ## Participating organisations
 
-Hackuarium, Hammerdirt, Biodesign.cc, The Montreux Jazz 
+Hackuarium, Hammerdirt, Biodesign for the Real World, The Montreux Jazz 
 
 
 ## Research questions
@@ -46,7 +46,7 @@ Hackuarium, Hammerdirt, Biodesign.cc, The Montreux Jazz
 ### Does the lake, in the area of concern, exceed bathing water quality standards during the event?
 
 * Definition of bathing water quality standards
-  - Swiss standard is less than 100 bioindicator bacteria per 100ml for recreational waters, but only swimming beaches are monitored.
+  - Swiss standard is less than 100 bioindicator bacteria per 100mL for recreational waters, but only swimming beaches are monitored.
 * Extra questions, as coliform bacteria levels are also assessed officially at swimming beaches, and we learned in 2022 that seagulls and swans can also carry bioindicator bacteria.
 
 
@@ -61,7 +61,14 @@ Hackuarium, Hammerdirt, Biodesign.cc, The Montreux Jazz
 
 ## Conclusions
 
-* state the conclusions
-  
-* more information
-* contact information
+* In preliminary conclusions, it can be posited that: 
+1) While there is still potential that our participatory research helped improve water quality around the bay, it is also just as likely that the renovation work for the new heating system, done along the quai in the spring of 2023, resulted in changes to the old sewage pipes below.
+2) The lack of rain in 2020 during the music festival was a big confounding factor for this latter part of the study.
+3) The year by year comparisons are needed for full conclusions to be drawn, including the question of whether the last year of sampling actually gave the 'cleanest' results to date.
+<br>  </br>
+<br>To note: </br>
+   Raw sewage is still being dumped into water bodies around the world, and making more people aware of this is necessary.<br>  </br>
+   Hackuarium volunteers may not manage to follow through for a campaign next summer, unless more (local) people join in.
+  <br>  </br>
+* more information  - https://wiki.hackuarium.ch
+* contact information  - biolab(at)hackuarium(point)ch
