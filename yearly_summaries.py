@@ -10,7 +10,7 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
 location_markers = {"SVT":"o", "VNX":"s", "MRD":"X"}
-location_colors = {"SVT":"blue", "VNX":"green", "MRD":"red"}
+location_colors = {"SVT":"dodgerblue", "VNX":"green", "MRD":"red"}
 
 def report_data(data, y: str = None, locations: list = None, categories: list = None, years: list = None):
     mask_year = data["year"].astype("str").isin(years)
@@ -154,7 +154,7 @@ def location_summary_charts(data, date_range, date_format, locations, project, t
     
     
     legend_elements = [
-        Line2D([0], [0], marker='o', markerfacecolor='blue', markeredgecolor=None, markersize=8, label="SVT", lw=0),
+        Line2D([0], [0], marker='o', markerfacecolor='dodgerblue', markeredgecolor=None, markersize=8, label="SVT", lw=0),
         Line2D([0], [0], marker='s', markerfacecolor='green', markeredgecolor=None, markersize=8, label='VNX', lw=0),
         Line2D([0], [0], marker='X', markerfacecolor='red', markeredgecolor=None, markersize=8, label='MRD', lw=0),
         Patch(facecolor='black', edgecolor=None, alpha=0.4, label='event')]
