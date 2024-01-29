@@ -1,14 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantifying changes in bioindicators &#8212; Bioindicators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quantifying changes in bioindicator levels &#8212; Bioindicators</title>
   
   
   
@@ -18,48 +18,53 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'titlepage';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -73,7 +78,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -108,11 +121,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -127,6 +145,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="#">
@@ -135,10 +154,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Bioindicators</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="random_variables.html">1. Random variables</a></li>
@@ -253,20 +284,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -283,7 +316,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Quantifying changes in bioindicators</h1>
+    <h1>Quantifying changes in bioindicator levels</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -295,10 +328,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-a-draft">This is a draft</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pariticpating-orgainzations">Pariticpating orgainzations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#participating-organisations">Participating organisations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#research-questions">Research questions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-durring-the-event">Does the lake, in the area of concern, exceed bathing water quality standards durring the event?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-general-did-the-bathing-water-quality-standards-improve-after-the-upgrades-to-the-local-network">In general did the bathing water quality standards improve after the upgrades to the local network?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-during-the-event">Does the lake, in the area of concern, exceed bathing water quality standards during the event?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-addition-to-the-installation-of-the-pipes-for-the-distant-heating-system-were-there-upgrades-to-the-local-sewage-network-and-if-so-did-they-have-any-effect-on-levels-of-pollution-observed-in-2023">In addition to the installation of the pipes for the ‘distant heating’ system, were there upgrades to the local sewage network, and if so, did they have any effect on levels of pollution observed in 2023?</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
@@ -311,60 +344,75 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="quantifying-changes-in-bioindicators">
-<h1>Quantifying changes in bioindicators<a class="headerlink" href="#quantifying-changes-in-bioindicators" title="Permalink to this heading">#</a></h1>
-<div class="section" id="this-is-a-draft">
-<h2>This is a draft<a class="headerlink" href="#this-is-a-draft" title="Permalink to this heading">#</a></h2>
-<p><em>authors: Rachel, Roger</em></p>
-<p>The Hackuarium has been monitoring the bathing water quality from June to August in the Baye de Montreux since 2016. This is a record of the results.</p>
-</div>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="quantifying-changes-in-bioindicator-levels">
+<h1>Quantifying changes in bioindicator levels<a class="headerlink" href="#quantifying-changes-in-bioindicator-levels" title="Link to this heading">#</a></h1>
+<section id="this-is-a-draft">
+<h2>This is a draft<a class="headerlink" href="#this-is-a-draft" title="Link to this heading">#</a></h2>
+<p>changed on 1 November 2023</p>
+<p>_authors: Rachel, Roger</p>
+<p>The public service community laboratory association, Hackuarium, has been monitoring recreational water quality on Lake Geneva with eight-week summer sampling campaigns in Montreux since 2016. This pulls together analyses, summarises results from this volunteer work, and potentially will provide an app for future data collection, analyses, and communication.</p>
+<p><img alt="cropbeachsign" src="https://github.com/rachelaronoff/qualite-deauRA/assets/48484650/466bb9c4-0dc5-4d29-bfba-6ba50b57a844" /></p>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Lifeguards from Montreux, who had participated in an open summer school around nanotech devices to detect pollution, joined in for one of the regular Hackuarium evenings, #OpenHackuarium, in February 2016 for brainstorming about ways to locally monitor lake water pollution.  Microbiological assays were suggested, as used already for several citizen science efforts by groups like WaterWatch.</p>
+<p>Experience using chromogenic EasyGel media in an educational context led to the proposition to use such methods for an initial 8-week sampling campaign, funded with a Hackuarium minigrant for the new project, Micro_to_Macro_Water_Pollution - part of the Montreux Clean Beach Project in collaboration with <a class="reference external" href="http://Biodesign.cc">Biodesign.cc</a>, and Hammerdirt.</p>
+<p>After two years documenting the observed ‘Jazz effect’ - when bioindicator levels for raw sewage entering the lake surpassed Swiss limits for recreational waters by several fold, we had little official response.  However, a further sampling season during the pandemic resulted in a significant difference. Additionally, data from official swimming beach monitoring corroborated these results, ultimately leading to <a class="reference external" href="https://github.com/Hackuarium/montreux-water-quality">analyses in github</a>, with three years of data archived in Zenodo, and <a class="reference external" href="https://doi.org/10.1002/2688-8319.12094">an open access publication</a> in 2021 about this volunteer participatory research.</p>
+<p>In 2022 and 2023, the Montreux Jazz subsidized further sampling seasons, while communication with the local and federal authorities was limited. In 2022, very little rainfall may have led to surprising results, with bioindicator levels reducing throughout the time of the music festival; while in 2023, after springtime renovations to install ‘distant heating’ circuits under the Montreux boardwalk, the ‘cleanest’ results to date were observed.  Perhaps leaks to the sewage system below the installed pipes were repaired in the course of the work.<br />
+(For further info, please see: <a class="reference external" href="https://wiki.hackuarium.ch/w/Montreux_2023">https://wiki.hackuarium.ch/w/Montreux_2023</a>)</p>
+</section>
+<section id="participating-organisations">
+<h2>Participating organisations<a class="headerlink" href="#participating-organisations" title="Link to this heading">#</a></h2>
+<p>Hackuarium, Hammerdirt, <a class="reference external" href="http://Biodesign.cc">Biodesign.cc</a>, The Montreux Jazz</p>
+</section>
+<section id="research-questions">
+<h2>Research questions<a class="headerlink" href="#research-questions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Are bioindicator levels during the music festival greater than bioindicator levels before or after the event?</p></li>
+<li><p>Is rain required for pollution peaks to be observed?</p></li>
+<li><p>What are the year by year total pollution levels for each sampling season (2016/2017/2020/2022/2023)?</p></li>
+<li><p>Might leaks still occur from the cement sewer system lines under the Montreux boardwalk, as the only serious peak of bioindicator incidence occurred in a particular site - the Vernex ‘baby beach’ - the week after the music festival in 2023?</p></li>
+</ol>
 <ul class="simple">
-<li><p>Needs to be completed</p></li>
+<li><p>as a further point: Will lake water pollution in some areas outside official swimming beaches be officially monitored?</p></li>
 </ul>
-</div>
-<div class="section" id="pariticpating-orgainzations">
-<h2>Pariticpating orgainzations<a class="headerlink" href="#pariticpating-orgainzations" title="Permalink to this heading">#</a></h2>
+<section id="does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-during-the-event">
+<h3>Does the lake, in the area of concern, exceed bathing water quality standards during the event?<a class="headerlink" href="#does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-during-the-event" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Needs to be completed</p></li>
+<li><p>Definition of bathing water quality standards</p>
+<ul>
+<li><p>Swiss standard is less than 100 bioindicator bacteria per 100ml for recreational waters, but only swimming beaches are monitored.</p></li>
 </ul>
-</div>
-<div class="section" id="research-questions">
-<h2>Research questions<a class="headerlink" href="#research-questions" title="Permalink to this heading">#</a></h2>
+</li>
+<li><p>Extra questions, as coliform bacteria levels are also assessed officially at swimming beaches, and we learned in 2022 that seagulls and swans can also carry bioindicator bacteria.</p></li>
+</ul>
+</section>
+<section id="in-addition-to-the-installation-of-the-pipes-for-the-distant-heating-system-were-there-upgrades-to-the-local-sewage-network-and-if-so-did-they-have-any-effect-on-levels-of-pollution-observed-in-2023">
+<h3>In addition to the installation of the pipes for the ‘distant heating’ system, were there upgrades to the local sewage network, and if so, did they have any effect on levels of pollution observed in 2023?<a class="headerlink" href="#in-addition-to-the-installation-of-the-pipes-for-the-distant-heating-system-were-there-upgrades-to-the-local-sewage-network-and-if-so-did-they-have-any-effect-on-levels-of-pollution-observed-in-2023" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Can we obtain any further description of potential upgrades to the sewage pipe?</p>
+<p>Levels of pollution could include many other things, but in this case the focus is upon raw sewage, so it is basically</p>
 <ul class="simple">
-<li><p>Needs to be verified</p></li>
+<li><p>Defined by the average number of bioindicators per sampling day before and after the upgrades  or</p></li>
+<li><p>Defined by the probability that a collected sample will exceed the standard before and after the upgrades</p></li>
 </ul>
-<div class="section" id="does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-durring-the-event">
-<h3>Does the lake, in the area of concern, exceed bathing water quality standards durring the event?<a class="headerlink" href="#does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-durring-the-event" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Definition of bathing water quality standards?</p></li>
-<li><p>Defined by the average number of bioindicators per sampling day?</p></li>
-<li><p>Defined by the probability that a collected sample will exceed the standard?</p></li>
+</li>
 </ul>
-</div>
-<div class="section" id="in-general-did-the-bathing-water-quality-standards-improve-after-the-upgrades-to-the-local-network">
-<h3>In general did the bathing water quality standards improve after the upgrades to the local network?<a class="headerlink" href="#in-general-did-the-bathing-water-quality-standards-improve-after-the-upgrades-to-the-local-network" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Description of upgrades?</p></li>
-<li><p>Defined by the average number of bioindicators per sampling day before and after the upgrades?</p></li>
-<li><p>Defined by the probability that a collected sample will exceed the standard before and after the upgrades?</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="conclusions">
-<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>state the conclusions</p></li>
 <li><p>more information</p></li>
 <li><p>contact information</p></li>
 </ul>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -391,11 +439,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
        href="random_variables.html"
@@ -406,10 +453,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -417,6 +461,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -426,10 +471,10 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-a-draft">This is a draft</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pariticpating-orgainzations">Pariticpating orgainzations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#participating-organisations">Participating organisations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#research-questions">Research questions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-durring-the-event">Does the lake, in the area of concern, exceed bathing water quality standards durring the event?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-general-did-the-bathing-water-quality-standards-improve-after-the-upgrades-to-the-local-network">In general did the bathing water quality standards improve after the upgrades to the local network?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-the-lake-in-the-area-of-concern-exceed-bathing-water-quality-standards-during-the-event">Does the lake, in the area of concern, exceed bathing water quality standards during the event?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-addition-to-the-installation-of-the-pipes-for-the-distant-heating-system-were-there-upgrades-to-the-local-sewage-network-and-if-so-did-they-have-any-effect-on-levels-of-pollution-observed-in-2023">In addition to the installation of the pipes for the ‘distant heating’ system, were there upgrades to the local sewage network, and if so, did they have any effect on levels of pollution observed in 2023?</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
@@ -454,6 +499,7 @@ By team@
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -479,8 +525,8 @@ By team@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
