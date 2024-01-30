@@ -9,8 +9,8 @@ from matplotlib.dates import MO, WeekdayLocator
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
-location_markers = {"SVT":"o", "VNX":"D", "MRD":"X"}
-location_colors = {"SVT":"black", "VNX":"green", "MRD":"goldenrod"}
+location_markers = {"SVT":"o", "VNX":"s", "MRD":"X"}
+location_colors = {"SVT":"blue", "VNX":"green", "MRD":"red"}
 
 def report_data(data, y: str = None, locations: list = None, categories: list = None, years: list = None):
     mask_year = data["year"].astype("str").isin(years)
@@ -66,13 +66,13 @@ def scatterplot_date_label(data, y, groups, title, project, date_range, date_for
     
     fig, ax = plt.subplots()    
     
-    ax.axvspan(date_range[0], date_range[1], color="black", alpha=0.2, label="Event")
+    ax.axvspan(date_range[0], date_range[1], color="black", alpha=0.2, label="event")
     sns.scatterplot(data = chart_data, x="date", y=y, hue="label", palette=palette)
     
     ax = major_and_minor_ticks(ax, date_format)
-    ax.axvline(x=date_range[0], ymin=0, ymax=1)
-    ax.axvline(x=date_range[1], ymin=0, ymax=1)
-    ax.set_ylabel("Average colonies per 100 ml", labelpad=20)
+    #ax.axvline(x=date_range[0], ymin=0, ymax=1)
+    #ax.axvline(x=date_range[1], ymin=0, ymax=1)
+    ax.set_ylabel("Colony forming units per 100mL", labelpad=20)
     ax.set_xlabel("")
     
     ax.set_title(f"{project}\n{title}", loc="left")
@@ -94,14 +94,15 @@ def scatterplot_date_label_rain(data, rain_data, y,  date_range, date_format, gr
     
     ax2 = ax.twinx()
     
-    ax.axvspan(date_range[0], date_range[1], color="black", alpha=0.2, label="Dates of interest")
+    ax.axvspan(date_range[0], date_range[1], color="black", alpha=0.2, label="event")
     ax.scatter(data = chart_data, x="date", y=y, color="dodgerblue", label=label)
     ax2.bar(data=rain_data, x = "date", height="mm", color="b", alpha=.1, label="rain") 
     
     ax = major_and_minor_ticks(ax, date_format)
-    ax.axvline(x=date_range[0], ymin=0, ymax=1)
-    ax.axvline(x=date_range[1], ymin=0, ymax=1)
-    ax.set_ylabel("Average colonies per 100 ml", labelpad=20)
+    # ax.axvline(x=date_range[0], ymin=0, ymax=1)
+    # ax.axvline(x=date_range[1], ymin=0, ymax=1)
+    ax.axhline(y=100, xmin=0, xmax=1, ls="--", label="limit", color="black")
+    ax.set_ylabel("Colony forming units per 100mL", labelpad=20)
     ax2.set_ylabel("Millimeters of rain")
     ax.set_xlabel("")
 
@@ -147,14 +148,15 @@ def location_summary_charts(data, date_range, date_format, locations, project, t
         ax=scatter_plot_with_std(**vars)
       
     ax = major_and_minor_ticks(ax, date_format)
-    ax.set_ylabel("Average colonies per 100 ml")
+    ax.set_ylabel("Colony forming units per 100mL")
     ax.set_xlabel("")
+    ax.axhline(y=100, xmin=0, xmax=1, ls="--", label="limit", color="black")
     
     
     legend_elements = [
-        Line2D([0], [0], marker='o', markerfacecolor='black', markeredgecolor=None, markersize=8, label="SVT", lw=0),
-        Line2D([0], [0], marker='D', markerfacecolor='green', markeredgecolor=None, markersize=8, label='VNX', lw=0),
-        Line2D([0], [0], marker='X', markerfacecolor='goldenrod', markeredgecolor=None, markersize=8, label='MRD', lw=0),
+        Line2D([0], [0], marker='o', markerfacecolor='blue', markeredgecolor=None, markersize=8, label="SVT", lw=0),
+        Line2D([0], [0], marker='s', markerfacecolor='green', markeredgecolor=None, markersize=8, label='VNX', lw=0),
+        Line2D([0], [0], marker='X', markerfacecolor='red', markeredgecolor=None, markersize=8, label='MRD', lw=0),
         Patch(facecolor='black', edgecolor=None, alpha=0.4, label='event')]
     
     ax.set_title(f"{project}\n{title}", loc="left")
@@ -172,9 +174,9 @@ def boxplots_before_during_after(data, project, title, figure_name, file_name):
     fig, ax = plt.subplots()
 
     ax.boxplot(data)
-    ax.set_ylabel("Average colonies per 100 ml")
-    ax.set_xticklabels(["before event", "during event", "after event"])
-
+    ax.set_ylabel("Colony forming units per 100mL")
+    ax.set_xticklabels(["before", "during", "after"])
+    ax.axhline(y=100, xmin=0, xmax=1, ls="--", label="limit", color="black")
     ax.set_title(f"{project}\n{title}", loc="left")
     plt.tight_layout()
 
